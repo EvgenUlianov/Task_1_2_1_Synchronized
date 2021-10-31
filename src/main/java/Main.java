@@ -29,11 +29,7 @@ public class Main {
             threadPool.execute(new Supplier(brand));
 
         final int timeOut15 = 15_000;
-        try {
-            Thread.sleep(timeOut15);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
+        CarShowroom.sleep(timeOut15);
 
         threadPool.shutdownNow();
 
